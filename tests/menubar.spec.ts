@@ -2,7 +2,7 @@ import { test, expect, ElementHandle } from '@playwright/test';
 
 test.describe('ARIA MenuBar tests', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('http://localhost:8000/');
+    await page.goto(process.env.TEST_MENUBAR_URI ? process.env.TEST_MENUBAR_URI : (process.env.TEST_URI ? process.env.TEST_URI : 'https://www.w3.org/WAI/ARIA/apg/example-index/menubar/menubar-navigation'));
 
     // Skip if there are no menubars on the page
     const menubar = page.getByRole('menubar');
