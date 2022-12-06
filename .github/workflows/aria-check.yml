@@ -1,11 +1,11 @@
-name: Playwright Tests
+name: ARIA Checks
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
 jobs:
-  test:
+  aria-checks:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
